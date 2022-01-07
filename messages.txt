@@ -1,0 +1,44 @@
+taintedphoenix: hello world!
+test_01: hello?
+test_01: it works so far
+
+test_01: only one error
+
+taintedphoenix: does it work?
+
+taintedphoenix: i think so?
+
+taintedphoenix: YES
+
+taintedphoenix: IT WORKS
+
+taintedphoenix: at least with one client...
+
+taintedphoenix: i might try speeding up the interval for message detection
+
+taintedphoenix: 1 second is actually very slow
+
+test_01: ok so bad news is it doesnt work with two clients
+
+test_01: but the good news is that that bug is a replit problem
+
+test_01: and i have a few ideas for how it could be fixed
+
+test_01: but i'll procrastinate on that for now
+
+taintedphoenix: ok im gonna see what the minimum message update delaty time is
+
+taintedphoenix: ok lets see if that worked
+
+taintedphoenix: seems it did
+
+taintedphoenix: that is much better
+
+antony: it does
+
+antony: for sure
+
+antony: i dont want to go lower out of fear of breaking something lol
+
+antony: ok now the only big thing left on my to do list is making this program work with multiple clients at the same time
+
