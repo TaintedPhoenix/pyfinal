@@ -1,0 +1,108 @@
+TaintedPhoenix: test
+
+TaintedPhoenix: test 2
+
+TaintedPhoenix: test 3
+
+TaintedPhoenix: ok so i got message sending working
+
+TaintedPhoenix: but message receiving is going to be a major challenge
+
+TaintedPhoenix: hi?
+
+TaintedPhoenix: um
+
+TaintedPhoenix: close
+
+TaintedPhoenix: not quite
+
+TaintedPhoenix: but close
+
+TaintedPhoenix: ok
+
+TaintedPhoenix: so
+
+TaintedPhoenix: it work
+
+TaintedPhoenix: that pogers
+
+Test03: alr
+
+TaintedPhoenix: YES
+
+TaintedPhoenix: IT WORKS
+
+TaintedPhoenix: IT ACTUALLY
+
+TaintedPhoenix: WORKS
+
+TaintedPhoenix: LETS GOOO
+
+TaintedPhoenix: FINALLYYYY
+
+TaintedPhoenix: SHEEESH
+
+TaintedPhoenix: ok
+
+TaintedPhoenix: well
+
+TaintedPhoenix: ok
+
+TaintedPhoenix: see
+
+Test03: test 03
+
+TaintedPhoenix: ok
+
+Test03: test 4
+
+TaintedPhoenix: ok and now it should be fully functional
+
+s0upman: ok
+
+s0upman: 
+
+s0upman: 
+
+s0upman: hi
+
+TaintedPhoenix: bruh
+
+TaintedPhoenix: lmao
+
+s0upman: e
+
+s0upman: e
+
+s0upman: e
+
+s0upman: e
+
+s0upman: e
+
+s0upman: e
+
+s0upman: e
+
+TaintedPhoenix: spamming
+
+s0upman: bruhmongus
+
+TaintedPhoenix: oh u can send blank messages
+
+TaintedPhoenix: huh
+
+TaintedPhoenix: ok bye kevin
+
+TaintedPhoenix: thanks for testing it for me
+
+TaintedPhoenix: 
+
+TaintedPhoenix: 
+
+TaintedPhoenix: 
+
+TaintedPhoenix: 
+
+TaintedPhoenix: ok i patched blank messages
+

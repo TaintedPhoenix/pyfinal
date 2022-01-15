@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Chatroom</title>
+    <script src="{{ url_for('static', filename='jquery.js') }}"></script>
+    <link rel="stylesheet" href="../static/chat.css">
+  </head>
+  <body>
+    <script>
+      $SCRIPT_ROOT = {{ request.script_root|tojson }};
+      $(function() {
+        let username = sessionStorage.getItem("username")
+        $("#username").text("User: " + username)
+      })
+
+      $(function () {
+        let token = sessionStorage.getItem("token")
+        if (token == null || token == "null") {
+          window.location.replace("./")
+        }
+      })
+
+      $(function() {
+      
+        function getmsgs() {
+          $.getJSON($SCRIPT_ROOT + '/getmessages', {}, function(data){
+            $("div#messages").text(data.messages)
+          })
+        }
+
+        let id = setInterval(getmsgs, [100])
+
+        setTimeout(function(id) {
+          sessionStorage.setItem("username", null)
+          sessionStorage.setItem("token", null)
+          clearInterval(id)
+          window.location.replace("./")
+        }, 7200000)
+      })
+
+      $(function() {
+    $('button#sendbutton').bind('click', function() {
+      $.getJSON($SCRIPT_ROOT + '/postmessage', {
+              username: sessionStorage.getItem("username"),
+              token: sessionStorage.getItem("token"),
+              message: $('input#sendbox').val()
+            }, function(data) {
+              $("input#sendbox").val("")
+            });
+      return false;
+    });
+  });
+
+    function logout() {
+      sessionStorage.setItem("username", null)
+      sessionStorage.setItem("token", null)
+      window.location.replace("./")
+    }
+
+    </script>
+    <div style="height:90%;width:80%; min-height: 500px; min-width: 80%;border:0px solid #ccc;font:16px/26px Georgia, Garamond, Serif;display: block; margin: auto;">
+      <div style="height:90%;width:100%; min-height: 450px; border:3px solid #6830ff;font:16px/26px Georgia, Garamond, Serif;display: block; margin: auto; border-radius: 10px; background-color: #1a1a1a;">
+        <div style="height:95%; width: 99%; padding: 0x 10px; min-height: 85vh; max-height: 85vh; border:0px solid #ccc; display:inline-block; overflow: auto; margin-left: .5%; font-family: arial; margin-top: .25%; white-space: pre-wrap;" id=messages>
+          test text
+        </div>
+        <div style="display:flex; justify-content: space-around;">
+          <input id=sendbox class=input1 type=text style="clear: both; display: inline-block; margin-bottom: -3px; margin-left: -3px; width: 90%; margin-top: 0; color: white;" placeholder="Send message...">
+          <button class="blBut" id=sendbutton style="float: right; display: inline-block; margin-right: -3px; margin-bottom: -3px; margin-left: -15px">Send</button>
+        </div>
+      </div>
+      <p id=username style="font-family: arial; font-size: 16px; text-align:left; margin-top: 0px; display:inline-block;"> <a href="./"><p style="font-family: arial; font-size: 16px; text-align:left; margin-top: 0px; display: inline-block; margin-left: 10px">Switch Account</p></a><a href="#" onclick="logout()"><p style="font-family: arial; font-size: 16px; text-align:left; margin-top: 0px; display: inline-block; margin-left: 10px">Log Out</p></a>
+    </div>
+    <script>
+      $SCRIPT_ROOT = {{ request.script_root|tojson }};
+      $("input#sendbox").keypress(function(event){
+        var keycode = (event.keycode ? event.keycode : event.which);
+        if (keycode == '13') {
+            
+            $.getJSON($SCRIPT_ROOT + '/postmessage', {
+              username: sessionStorage.getItem("username"),
+              token: sessionStorage.getItem("token"),
+              message: $('input#sendbox').val()
+            }, function(data) {
+              $("input#sendbox").val("")
+            });
+      
+
+        }
+        event.stopPropagation();
+      })
+    </script>
+  </body>
+</html>

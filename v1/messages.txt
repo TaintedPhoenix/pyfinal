@@ -42,3 +42,17 @@ antony: i dont want to go lower out of fear of breaking something lol
 
 antony: ok now the only big thing left on my to do list is making this program work with multiple clients at the same time
 
+test_01: nope
+
+test_01: doesnt work
+
+taintedphoenix: it works on windows
+
+taintedphoenix: but replit-
+
+taintedphoenix: nah
+
+taintedphoenix: \nXD\n
+
+test: message
+
